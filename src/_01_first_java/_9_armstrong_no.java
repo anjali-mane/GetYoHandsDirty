@@ -21,12 +21,7 @@ public class _9_armstrong_no
             t=t/10;
 
         }
-        if (sum==a)
-        {
-            System.out.println("a is armstrong number!!");
-        }else {
-            System.out.println("b is armstrong number!!");
-        }
+        System.out.println(sum == a ? "a is armstrong number!!" : "b is armstrong number!!");
 
 
     }

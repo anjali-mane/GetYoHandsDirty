@@ -10,19 +10,27 @@ public class _03_sum_of_neg_pos_even_pos_odd_inputs
         int n;
         int sum_of_neg_no=0,sum_of_pos_even_no=0,sum_of_pos_odd_no=0;
         System.out.println("Enter numbers(exit=0): ");
-        do {
-            n=sc.nextInt();
-            if(n<0)
-            {
-                sum_of_neg_no+=n;
-            } else if (n>0 && n%2==0)
-            {
-                sum_of_pos_even_no+=n;
-            }else if (n>0 && n%2!=0)
-            {
-                sum_of_pos_odd_no+=n;
+        n=sc.nextInt();
+        if(n<0)
+        {
+            sum_of_neg_no+=n;
+        } else if (n>0 && n%2==0)
+        {
+            sum_of_pos_even_no+=n;
+        }else if (n>0 && n%2!=0)
+        {
+            sum_of_pos_odd_no+=n;
+        }
+        while (n != 0) {
+            n = sc.nextInt();
+            if (n < 0) {
+                sum_of_neg_no += n;
+            } else if (n > 0 && n % 2 == 0) {
+                sum_of_pos_even_no += n;
+            } else if (n > 0 && n % 2 != 0) {
+                sum_of_pos_odd_no += n;
             }
-        }while (n!=0);
+        }
         System.out.println("sum of negative numbers is: "+sum_of_neg_no);
         System.out.println("sum of positive even numbers is: "+sum_of_pos_even_no);
         System.out.println("sum of positive odd numbers is: "+sum_of_pos_odd_no);
